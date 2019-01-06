@@ -1,5 +1,7 @@
 package com.example.demo2;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/post")
 public class PostController {
+    private static final Logger logger = LoggerFactory.getLogger(PostController.class);
 
     @Autowired
     private JdbcTemplate jdbcTemplate;  /*service에 작성하는걸 추천추천*/
